@@ -89,13 +89,6 @@ A full-stack Airbnb-inspired web application where users can explore listings, c
 
 ## Installation
 
-### Clone Repository
-
-```bash
-git clone <repository-url>
-cd airbnb-clone
-```
-
 ### Install Dependencies
 
 ```bash
