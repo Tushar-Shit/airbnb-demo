@@ -1,42 +1,39 @@
 a {
     text-decoration: none;
-    color: rgb(39, 39, 39);
+    color: rgb(39,39,39);
 }
 
 body {
-    padding-top: 10vh;
+    padding-top: 80px;
 }
 
 .header {
-    height: fit-content;
     position: fixed;
     top: 0;
-    z-index: 100;
     width: 100%;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
-
+    z-index: 9999;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
 }
 
-
 #navbar {
-    background-color: rgb(240, 240, 240);
-    min-height: 10vh;
+    background-color: rgb(240,240,240);
+    min-height: 80px;
     padding-left: 50px;
 }
 
 .navleft {
     display: flex;
-    gap: 1vw;
-    justify-content: space-around;
-    font-size: 1.5rem;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .icon {
+    font-size: 1.5rem;
     color: red;
 }
 
 .navsearch {
-    align-content: center;
     width: 35%;
 }
 
@@ -65,7 +62,6 @@ body {
 .navbar-brand {
     font-size: 1.8rem;
     color: rgb(255, 0, 55);
-
 }
 
 .navbar-brand:hover {
@@ -73,7 +69,7 @@ body {
 }
 
 .nav-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .bold {
@@ -86,45 +82,57 @@ body {
     color: rgb(255, 0, 55);
 }
 
-/* footer  */
+/* FOOTER */
+
 footer {
     width: 100%;
-    height: fit-content;
-    color: black;
-    background-color: rgb(161, 161, 161);
-    justify-items: center;
+    background: rgb(161,161,161);
+    text-align: center;
+    padding: 0.5rem 0;
 }
 
 .f-left {
-    padding-top: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
-    width: max-content;
+    gap: 2px;
 }
 
 .f-socials {
-    margin-top: 1vh;
-    width: 60%;
+    margin-top: 4px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.2rem;
-    color: black;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.1rem;
 }
 
-@media (max-width: 600px) {
+.f-text p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* MOBILE */
+
+@media (max-width:600px) {
+
     #navbar {
-        background-color: rgb(240, 240, 240);
-        min-height: 10vh;
-        padding-left: 0;
-        /* font-size: 0.8rem; */
+        padding-left: 10px;
+    }
+
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
     }
 
     .nav-link {
         font-size: 1rem;
-        font-weight: 450;
+    }
+
+    .navsearch {
+        width: 100%;
     }
 
     .f-text p {
