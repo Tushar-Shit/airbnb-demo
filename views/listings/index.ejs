@@ -1,0 +1,52 @@
+<% layout("./layouts/boilerplate.ejs") %>
+
+    <body>
+        <div class="row row-cols-1 row-cols-lg-4" id="eachRow">
+            <%for(let item of alllist){%>
+                <div class="image-card card col">
+                    <div class="card-top">
+                        <a href="/listings/<%=item.id%>">
+                            <img src="<%= item.image.url%>" class="card-img-top" alt="<%= item.image.filename%>">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text name">
+                             <a href="/listings/<%=item.id%>"><%=item.title%></a>
+                        </p>
+                        <p class="card-text price">
+                           <a href="/listings/<%=item.id%>"><b>&#8377;</b> <%=item.price.toLocaleString("en-IN")%>/Night</a>
+                           <span id="taxInfo" class="tax-info hidden"> +18% GST</span>
+                        </p>
+                        <p class="card-text">
+                            <span>
+                                <svg width="18" height="18" viewBox="0 0 23 23" fill="black" xmlns="http://w3.org">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <%=item.location%>, <%=item.zip%>
+                            </span>
+                        </p>
+                        <p class="card-text country">
+                            <span><svg width="16" height="16" viewBox="0 0 27 27" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg></span>
+                            <span>
+                                <%=item.country%>
+                            </span>
+                        </p>
+                        <p class="card-text">
+                            Rating: 4.5
+                        </p>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+
+    </body>

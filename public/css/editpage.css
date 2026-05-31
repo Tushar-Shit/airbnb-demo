@@ -1,0 +1,52 @@
+* {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.img-preview {
+    border: 1px solid black;
+    border-color: red;
+}
+
+.form-container {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+    outline: 0;
+}
+
+#form-heading {
+    margin: 0;
+    margin-top: 1vh;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+label {
+    color: black;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+    }
+
+    #form-heading {
+        margin-top: 0.5vh;
+        font-size: 1.7rem;
+    }
+}

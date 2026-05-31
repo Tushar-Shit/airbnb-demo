@@ -1,0 +1,133 @@
+a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}
+
+body {
+    padding-top: 10vh;
+}
+
+.header {
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+#navbar {
+    background-color: rgb(240, 240, 240);
+    min-height: 10vh;
+    padding-left: 50px;
+}
+
+.navleft {
+    display: flex;
+    gap: 1vw;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.icon {
+    color: red;
+}
+
+.navsearch {
+    align-content: center;
+    width: 35%;
+}
+
+.navsearch form {
+    width: 100%;
+}
+
+.searchinp {
+    width: 90%;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(255, 0, 55);
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(255, 0, 55);
+}
+
+.navright {
+    padding-right: 3vw;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: rgb(255, 0, 55);
+
+}
+
+.navbar-brand:hover {
+    color: rgb(255, 83, 120);
+}
+
+.nav-link {
+    font-size: 1.3rem;
+}
+
+.bold {
+    font-weight: 550;
+    color: black;
+}
+
+.nav-link:hover {
+    font-weight: 550;
+    color: rgb(255, 0, 55);
+}
+
+/* footer  */
+footer {
+    width: 100%;
+    height: fit-content;
+    color: black;
+    background-color: rgb(161, 161, 161);
+    justify-items: center;
+}
+
+.f-left {
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: max-content;
+}
+
+.f-socials {
+    margin-top: 1vh;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        background-color: rgb(240, 240, 240);
+        min-height: 10vh;
+        padding-left: 0;
+        /* font-size: 0.8rem; */
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        font-weight: 450;
+    }
+
+    .f-text p {
+        font-size: 0.87rem;
+    }
+}

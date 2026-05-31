@@ -1,0 +1,50 @@
+.container {
+    width: 90%;
+    /* padding-top: 3vh; */
+}
+
+#eachRow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image-card {
+    width: 18rem;
+    border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 2rem;
+    padding: 9px;
+    position: relative;
+}
+
+.card-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height:200px;
+}
+
+.card-top a img {
+    height: 100%;
+}
+
+.card-body {
+    height: fit-content;
+    padding: 5px;
+    padding-left: 7px;
+}
+
+.card-text {
+    margin: 0;
+
+}
+.name,
+.price,
+.country {
+    font-weight: 500;
+    color: black;
+}
+
+@media (max-width: 500px) {}

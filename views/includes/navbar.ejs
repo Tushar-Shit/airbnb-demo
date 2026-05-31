@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-light" id="navbar">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navleft">
+        <a class="icon" href="/">
+          <i class="fa-regular fa-compass"></i>
+        </a>
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto navsearch">
+        <form class="d-flex" role="search">
+          <input class="form-control me-1 searchinp" type="search" placeholder="Search"  />
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="navbar-nav ms-auto navright">
+        <a class="nav-link" href="/listings/new">Add New</a>
+        <% if(!currentUser){%>
+          <a class="nav-link bold" aria-current="page" href="/user/signup">Sign Up</a>
+          <a class="nav-link bold" href="/user/login">Login</a>
+          <%}%>
+            <% if(currentUser){%>
+              <a class="nav-link bold" href="/user/logout">Logout</a>
+              <%}%>
+      </div>
+    </div>
+  </div>
+</nav>

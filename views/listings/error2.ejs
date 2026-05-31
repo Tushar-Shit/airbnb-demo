@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* Base Page Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Glassmorphism Card Design */
+        .error-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .error-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Large HTTP Error Code Text */
+        .error-code {
+            font-size: 110px;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        /* Message Formatting */
+        .error-message {
+            color: #94a3b8;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        /* Flexbox Buttons */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        @media (max-width: 480px) {
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+
+        /* Custom Action Buttons */
+        .btn {
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #4f46e5, #06b6d4);
+            border: none;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #06b6d4, #4f46e5);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #f8fafc;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="error-card">
+            
+            <!-- Dynamic HTTP Status Code (e.g. 404, 500) -->
+            <div class="error-code"><%= error.status || 'Error' %></div>
+            
+            <!-- Dynamic Contextual Message -->
+            <p class="error-message"><%= error.message %></p>
+            
+            <!-- Navigation Actions -->
+            <div class="btn-group">
+                <a href="/" class="btn btn-primary">Go Home</a>
+                <button onclick="history.back()" class="btn btn-outline">Go Back</button>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
